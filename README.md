@@ -9,9 +9,8 @@ No modal dialogs!
 
 ## Usage
 
-Run `npm start`
-
-Compile LESS `less-watch-compiler less css`
+1. Run `npm run watch` to start Webpack development server
+2. Run `npm start` to start Electron App
 
 ## Roadmap to first release
 
@@ -20,7 +19,7 @@ Compile LESS `less-watch-compiler less css`
 - [ ] Typescript
 - [ ] Integration tests
 - [ ] Prod build
-- [x] Dev build
+- [x] Webpack dev server
 - [x] Less layout
 - [x] React UI
 - [x] Shutdown button
