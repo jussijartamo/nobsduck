@@ -1,0 +1,170 @@
+@back-color: #eee;
+@text-color: #555;
+@selected-color: black;
+@selected-bgr: white;
+@link-color: #337ab7;
+
+html, body, #app {
+  width: 100%;
+  height: 100%;
+}
+#app {
+  >div {
+    width: 100%;
+    height: 100%;
+    display: table;
+    >div {
+      display: table-row;
+      >div {
+        display: table-cell;
+        background-color: @back-color;
+      }
+    }
+  }
+}
+
+.area {
+  height: 100%;
+}
+
+.servers {
+  width: 210px;
+  >h1 {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 10px 10px;
+    padding: 0px 0px;
+    >span {
+      color: @link-color;
+      &:hover {
+        cursor: pointer;
+        color: @selected-color;
+      }
+      &.title {
+        user-select: none;
+        cursor: grab;
+        -webkit-app-region: drag;
+      }
+    }
+  }
+}
+.cast-shadow {
+  box-shadow: 1px 3px 5px #444;
+}
+.nav-tabs {
+  user-select: none;
+  position: relative;
+  margin-bottom:0px;
+  padding-bottom:0px;
+  &, &>li {
+    margin-bottom: 0px;
+    border-bottom: none;
+  }
+  &>li.active, &>li.active>a, &>li.active>a:hover, &>li.active>a:focus  {
+    background-color: @back-color;
+  }
+  &>li>a, &>li.active>a, &>li.active>a:hover, &>li.active>a:focus {
+    margin-right: 0px;
+    border-radius: 0px;
+    border: none;
+  }
+  
+  li>a>.glyphicon-remove {
+    color: transparent;
+  }
+  &>li>a:hover>.glyphicon-remove, &>li>a>.glyphicon-remove.active {
+    cursor: pointer;
+    color: @link-color;
+  }
+  li>a>.glyphicon-remove:hover {
+    color: @selected-color;
+  }
+}
+
+.breadcrumb {
+  user-select: none;
+  margin: 0px;
+  padding: 5px;
+  border: none;
+  border-radius: 0px;
+  background-color:transparent;
+  border: 1px solid @back-color;
+  &:hover {
+    border: 1px solid @link-color;
+    cursor: text;
+  }
+}
+
+.list-group-item {
+  user-select: none;
+  background-color: transparent;
+  color: @link-color;
+  border: none;
+  .glyphicon {
+    color: transparent;
+  }
+  &:hover, &:hover .glyphicon {
+    color: @link-color;
+    background-color: @selected-bgr;
+    cursor: pointer;
+  }
+  &>.glyphicon {
+    margin-left: 10px;
+  }
+  &>.glyphicon:hover {
+    color: @selected-color;
+  }
+}
+
+.files {
+  margin: 0px;
+  padding: 0px;
+  >tbody {
+    >tr:hover {
+      background-color: @selected-bgr;
+      cursor: pointer;
+    }
+    >tr>td {
+      padding: 2px;
+      border: none;
+      user-select: none;
+    }
+  }
+}
+
+.size {
+  user-select: none;
+  cursor: default;
+}
+.mb:after {
+  content: "mb";
+  font-size: 12px;
+  vertical-align: super;
+  text-transform: uppercase;
+}
+.table>thead>tr>th {
+  border: none;
+  padding: 5px 0px;
+}
+.form-control {
+  border-radius: 0px;
+}
+a, a:hover {
+  color: @link-color;
+  font-weight: bolder;
+  text-decoration: none;
+}
+li, .breadcrumb .active {
+  font-weight: normal;
+}
+.headings>th {
+  text-transform: uppercase;
+  user-select: none;
+  cursor: pointer;
+}
+table tr td:last-child {
+  white-space: nowrap;
+  text-align: right;
+}
