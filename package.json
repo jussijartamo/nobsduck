@@ -27,7 +27,7 @@
     "babel-register": "^6.23.0",
     "bootstrap-less": "^3.3.8",
     "css-loader": "^0.26.4",
-    "electron": "^1.6.2",
+    "electron": "^9.1.0",
     "less": "^2.7.2",
     "less-loader": "^3.0.0",
     "style-loader": "^0.13.2",
